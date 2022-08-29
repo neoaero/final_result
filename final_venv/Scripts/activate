@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\venvs\fastcamp\4차_파이널프로젝트\final-project-remake\final_project\final_project\final_venv"
+VIRTUAL_ENV="C:\venvs\fastcampus\final_result\final_venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

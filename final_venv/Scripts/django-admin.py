@@ -1,4 +1,4 @@
-#!C:\venvs\fastcamp\4차_파이널프로젝트\final-project-remake\final_project\final_project\final_venv\Scripts\python.exe
+#!C:\venvs\fastcampus\final_result\final_venv\Scripts\python.exe
 # When the django-admin.py deprecation ends, remove this script.
 import warnings
 

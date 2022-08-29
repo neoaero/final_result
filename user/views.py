@@ -15,6 +15,14 @@ User = get_user_model()
 
 def index(request):
     return render(request, "base.html")
+    # user = User.objects.filter(username="admin").first()
+    # email = user.email if user else "Anonymous User!"
+    # print(email)
+    # print(request.user.is_authenticated)
+    # if request.user.is_authenticated is False:
+    #     email = "Anonymous User!"
+    #     print(email)
+    # return render(request,"base.html", {"welcome_msg": "Hello FastCampus!"})
 
 @csrf_exempt
 def get_user(request, user_id):
@@ -54,7 +62,8 @@ def login_view(request):
             if user is not None:
                 msg = "로그인 성공"
                 login(request, user)
-        return render(request, "base.html", {"form": form, "msg": msg})
+        return redirect("base")
+        # return redirect(request, "base.html", {"form": form, "msg": msg})
     else:
         form = AuthenticationForm()
         return render(request, "login.html", {"form": form})
@@ -68,6 +77,7 @@ def logout_view(request):
     return redirect("base")
 
 # TODO: 8. user 목록은 로그인 유저만 접근 가능하게 해주세요
+@login_required
 def user_list_view(request):
     # TODO: 7. /users 에 user 목록을 출력해주세요
     # TODO: 9. user 목록은 pagination이 되게 해주세요

@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=C:\venvs\fastcamp\4차_파이널프로젝트\final-project-remake\final_project\final_project\final_venv
+set VIRTUAL_ENV=C:\venvs\fastcampus\final_result\final_venv
 
 if not defined PROMPT set PROMPT=$P$G
 
